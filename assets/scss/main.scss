@@ -61,6 +61,14 @@ textarea[type="text"]:focus {
   }
 }
 
+img {
+  border-radius: 25%;
+
+  &:hover {
+    opacity: 0.5;
+  }
+}
+
 .bouncy {
   font-size: 2.5rem;
   animation-duration: 1s;
@@ -73,7 +81,6 @@ textarea[type="text"]:focus {
     animation-name: rubberBand;
   }
 }
-
 
 @keyframes rubberBand {
   from {
