@@ -1,0 +1,49 @@
+$fuente: 'Edu SA Beginner', cursive ,'Verdana';
+$color-principal:#E4F277;
+$color-secundario: #F2F2F2;
+$color-hiper: #F20505;
+$color-contraste: #222326;
+
+html, body {
+    font-family: $fuente;
+    color: $color-secundario;
+    background-color: $color-contraste;
+}
+
+h1, h2, h3, h4 {
+    color: $color-principal;
+}
+
+a {
+    color: $color-hiper;
+}
+
+@mixin caja($color-fondo, $color-texto, $ancho, $alto) {
+    font-family: $fuente;
+    color: $color-texto;
+    background-color: $color-fondo;
+    height: $alto;
+    width: $ancho;
+}
+
+$colores: (
+amarillo: #E4F277,
+gris: grey,
+blanco: #F2F2F2,
+rojo: #F20505
+);
+
+@each $color-caja, $color in $colores {
+    .caja-#{$color-caja} {
+        @include caja ($color-contraste, $color, 400px, 600px)
+    }
+}
+
+
+.color-amarillo-patito {
+    color:map-get($colores, amarillo);
+}
+
+.color-gris-triste {
+    color:map-get($colores, gris);
+}
