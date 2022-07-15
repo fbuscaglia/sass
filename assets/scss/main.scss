@@ -5,8 +5,8 @@
     Blanco Letras: #F2F2F2
 */
 
-$color-titulos:#E4F277;
-$color-texto: #F2F2F2;
+$color-titulos: #e4f277;
+$color-texto: #f2f2f2;
 $color-fondo: #1d1d1d;
 
 * {
@@ -66,10 +66,13 @@ textarea[type="text"]:focus {
 }
 
 img {
-  border-radius: 25%;
+  border-radius: 15%;
 
   &:hover {
     opacity: 0.5;
+  }
+  .imagen {
+    border-radius: 0%;
   }
 }
 
